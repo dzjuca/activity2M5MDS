@@ -1,0 +1,21 @@
+# Quarto
+/.quarto/
+*_files/
+*_cache/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Datos sensibles (comentar si quieres versionar los datos)
+# data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/

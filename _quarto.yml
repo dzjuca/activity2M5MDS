@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "My Quarto Project"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: viz.qmd
+        text: Visualizations
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    embed-resources: false  # para websites no se necesita

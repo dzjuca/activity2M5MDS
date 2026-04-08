@@ -1,0 +1,39 @@
+---
+title: "Actividad 2"
+subtitle: "Visualización Analítica – Máster en Ciencia de Datos - Universidad Yachay Tech"
+author:
+  - name: Daniel Zambrano Juca
+  - name: Juan Diego Zumárraga
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+---
+
+## Objetivo
+
+Desarrollar la capacidad de seleccionar el tipo adecuado de gráfico para responder preguntas sobre datos categóricos y cuantitativos.
+
+## Dataset
+
+El dataset utilizado corresponde a mediciones morfológicas de pingüinos recolectadas en tres islas del archipiélago Palmer, Antártida. Contiene 344 registros con las siguientes variables:
+
+| Variable | Tipo | Descripción |
+|----------|------|-------------|
+| `species` | Categórica | Especie del pingüino (Adelie, Chinstrap, Gentoo) |
+| `island` | Categórica | Isla de procedencia (Biscoe, Dream, Torgersen) |
+| `culmen_length_mm` | Cuantitativa | Longitud del culmen en mm |
+| `culmen_depth_mm` | Cuantitativa | Profundidad del culmen en mm |
+| `flipper_length_mm` | Cuantitativa | Longitud de la aleta en mm |
+| `body_mass_g` | Cuantitativa | Masa corporal en gramos |
+| `sex` | Categórica | Sexo del individuo (MALE, FEMALE) |
+
+## Vista previa de los datos
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("data/penguins.csv")
+df.head(10)
+```

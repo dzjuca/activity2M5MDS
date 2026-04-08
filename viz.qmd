@@ -1,0 +1,84 @@
+---
+title: "Visualizaciones"
+format:
+  html:
+    theme: cosmo
+    toc: true
+---
+
+## Pregunta 1 – Distribución por grupo
+
+¿Cómo varía la masa corporal (`body_mass_g`) entre las diferentes especies y islas de los pingüinos?
+
+```{python}
+import pandas as pd
+import altair as alt
+
+df = pd.read_csv("data/penguins.csv")
+df = df.dropna(subset=["body_mass_g", "species", "island"])
+
+graf_p1 = alt.Chart(df).mark_boxplot(extent="min-max").encode(
+    x=alt.X("species:N", title="Especie", axis=alt.Axis(labelAngle=-30)),
+    y=alt.Y("body_mass_g:Q", title="Masa corporal (g)"),
+    color=alt.Color("species:N", legend=alt.Legend(title="Especie"))
+).properties(
+    width=180,
+    height=300
+).facet(
+    facet=alt.Facet("island:N", title="Isla"),
+    columns=3,
+    title="Distribución de masa corporal por especie e isla"
+)
+
+graf_p1
+```
+
+**Análisis:** Los pingüinos Gentoo, presentes únicamente en la isla Biscoe, presentan consistentemente la mayor masa corporal, con valores medianos cercanos a 5000 g. Las especies Adelie y Chinstrap muestran masas similares, entre 3500 y 3800 g aproximadamente. Adelie es la única especie presente en las tres islas, mientras que Chinstrap solo aparece en Dream y Gentoo exclusivamente en Biscoe. El facetado por isla permite comparar subgrupos sin sobrecargar un único gráfico.
+
+## Pregunta 2 – Ubicación de especies
+
+¿Qué especies de pingüinos se encuentran en cada isla? ¿Alguna especie está presente solo en una isla?
+
+```{python}
+conteo = df.groupby(["island", "species"]).size().reset_index(name="count")
+
+graf_p2 = alt.Chart(conteo).mark_rect().encode(
+    x=alt.X("species:N", title="Especie", axis=alt.Axis(labelAngle=0)),
+    y=alt.Y("island:N", title="Isla"),
+    color=alt.Color("count:Q", title="Conteo", scale=alt.Scale(scheme="blues")),
+    tooltip=["island:N", "species:N", "count:Q"]
+).properties(
+    width=300,
+    height=200,
+    title="Presencia de especies por isla"
+)
+
+graf_p2
+```
+
+**Análisis:** El heatmap revela claramente las asociaciones entre especies e islas. Adelie es la única especie presente en las tres islas (Biscoe, Dream y Torgersen). Chinstrap aparece exclusivamente en Dream, y Gentoo únicamente en Biscoe. Las celdas vacías (sin color) confirman las ausencias, lo que hace de esta visualización una forma compacta y directa de identificar asociaciones entre variables categóricas.
+
+## Pregunta 3 – Diferencias entre sexos
+
+¿Existen diferencias notables entre machos y hembras en alguna característica cuantitativa?
+
+```{python}
+df_sex = df.dropna(subset=["culmen_length_mm", "sex"])
+df_sex = df_sex[df_sex["sex"].isin(["MALE", "FEMALE"])]
+
+graf_p3 = alt.Chart(df_sex).mark_boxplot(extent="min-max").encode(
+    x=alt.X("sex:N", title="Sexo", axis=alt.Axis(labelAngle=0)),
+    y=alt.Y("culmen_length_mm:Q", title="Longitud del culmen (mm)"),
+    color=alt.Color("sex:N", legend=alt.Legend(title="Sexo"),
+                    scale=alt.Scale(domain=["MALE", "FEMALE"],
+                                    range=["#4C72B0", "#DD8452"]))
+).properties(
+    width=250,
+    height=300,
+    title="Distribución de longitud del culmen por sexo"
+)
+
+graf_p3
+```
+
+**Análisis:** Los machos presentan una longitud del culmen consistentemente mayor que las hembras, con medianas aproximadas de 48 mm y 43 mm respectivamente. El box plot es adecuado para comparar distribuciones entre dos categorías ya que muestra mediana, rango intercuartílico y valores extremos de forma simultánea. La separación clara entre ambas cajas sugiere que el culmen es una característica morfológica con dimorfismo sexual notable en esta población.
