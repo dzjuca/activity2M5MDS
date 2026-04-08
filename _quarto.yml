@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Master en Ciencia de Datos"
+  title: "Máster en Ciencia de Datos"
   navbar:
     left:
       - href: index.qmd
