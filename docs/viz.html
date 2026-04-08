@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Visualizaciones – My Quarto Project</title>
+<title>Visualizaciones – Master en Ciencia de Datos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">My Quarto Project</span>
+    <span class="navbar-title">Master en Ciencia de Datos</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -184,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pregunta-1-distribución-por-grupo" class="level2">
 <h2 class="anchored" data-anchor-id="pregunta-1-distribución-por-grupo">Pregunta 1 – Distribución por grupo</h2>
 <p>¿Cómo varía la masa corporal (<code>body_mass_g</code>) entre las diferentes especies y islas de los pingüinos?</p>
-<div id="51c43a01" class="cell" data-execution_count="1">
+<div id="bae4d1cd" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -210,26 +210,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>graf_p1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="1">
 
 <style>
-  #altair-viz-960935f4a3e3461596d1abe755b3d79a.vega-embed {
+  #altair-viz-178af6f092e047deb2b1027579eddc63.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-960935f4a3e3461596d1abe755b3d79a.vega-embed details,
-  #altair-viz-960935f4a3e3461596d1abe755b3d79a.vega-embed details summary {
+  #altair-viz-178af6f092e047deb2b1027579eddc63.vega-embed details,
+  #altair-viz-178af6f092e047deb2b1027579eddc63.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-960935f4a3e3461596d1abe755b3d79a"></div>
+<div id="altair-viz-178af6f092e047deb2b1027579eddc63"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-960935f4a3e3461596d1abe755b3d79a") {
-      outputDiv = document.getElementById("altair-viz-960935f4a3e3461596d1abe755b3d79a");
+    if (outputDiv.id !== "altair-viz-178af6f092e047deb2b1027579eddc63") {
+      outputDiv = document.getElementById("altair-viz-178af6f092e047deb2b1027579eddc63");
     }
 
     const paths = {
@@ -287,7 +287,7 @@ El gráfico revela que la <strong>especie</strong> es el factor determinante en 
 <section id="pregunta-2-ubicación-de-especies" class="level2">
 <h2 class="anchored" data-anchor-id="pregunta-2-ubicación-de-especies">Pregunta 2 – Ubicación de especies</h2>
 <p>¿Qué especies de pingüinos se encuentran en cada isla? ¿Alguna especie está presente solo en una isla?</p>
-<div id="20aad177" class="cell" data-execution_count="2">
+<div id="16258e4c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Preparar el conteo</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>conteo <span class="op">=</span> df.groupby([<span class="st">"island"</span>, <span class="st">"species"</span>]).size().reset_index(name<span class="op">=</span><span class="st">"count"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -325,26 +325,26 @@ El gráfico revela que la <strong>especie</strong> es el factor determinante en 
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>graf_p2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="2">
 
 <style>
-  #altair-viz-ac31eacd56034f01a4e736df9340f870.vega-embed {
+  #altair-viz-581ea18a9aa847398f151ad48629ae0a.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-ac31eacd56034f01a4e736df9340f870.vega-embed details,
-  #altair-viz-ac31eacd56034f01a4e736df9340f870.vega-embed details summary {
+  #altair-viz-581ea18a9aa847398f151ad48629ae0a.vega-embed details,
+  #altair-viz-581ea18a9aa847398f151ad48629ae0a.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-ac31eacd56034f01a4e736df9340f870"></div>
+<div id="altair-viz-581ea18a9aa847398f151ad48629ae0a"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ac31eacd56034f01a4e736df9340f870") {
-      outputDiv = document.getElementById("altair-viz-ac31eacd56034f01a4e736df9340f870");
+    if (outputDiv.id !== "altair-viz-581ea18a9aa847398f151ad48629ae0a") {
+      outputDiv = document.getElementById("altair-viz-581ea18a9aa847398f151ad48629ae0a");
     }
 
     const paths = {
@@ -402,7 +402,7 @@ El mapa de calor revela patrones de distribución específicos: mientras que la 
 <section id="pregunta-3-diferencias-entre-sexos" class="level2">
 <h2 class="anchored" data-anchor-id="pregunta-3-diferencias-entre-sexos">Pregunta 3 – Diferencias entre sexos</h2>
 <p>¿Existen diferencias notables entre machos y hembras en alguna característica cuantitativa?</p>
-<div id="bbfee9fd" class="cell" data-execution_count="3">
+<div id="78162542" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -433,26 +433,26 @@ El mapa de calor revela patrones de distribución específicos: mientras que la 
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>graf_p3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="3">
 
 <style>
-  #altair-viz-83bfe1c19b0e4190a0bffc4cf7d1a25e.vega-embed {
+  #altair-viz-43f15645d8d94577b820b5bb7dfda799.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-83bfe1c19b0e4190a0bffc4cf7d1a25e.vega-embed details,
-  #altair-viz-83bfe1c19b0e4190a0bffc4cf7d1a25e.vega-embed details summary {
+  #altair-viz-43f15645d8d94577b820b5bb7dfda799.vega-embed details,
+  #altair-viz-43f15645d8d94577b820b5bb7dfda799.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-83bfe1c19b0e4190a0bffc4cf7d1a25e"></div>
+<div id="altair-viz-43f15645d8d94577b820b5bb7dfda799"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-83bfe1c19b0e4190a0bffc4cf7d1a25e") {
-      outputDiv = document.getElementById("altair-viz-83bfe1c19b0e4190a0bffc4cf7d1a25e");
+    if (outputDiv.id !== "altair-viz-43f15645d8d94577b820b5bb7dfda799") {
+      outputDiv = document.getElementById("altair-viz-43f15645d8d94577b820b5bb7dfda799");
     }
 
     const paths = {
