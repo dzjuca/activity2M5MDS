@@ -184,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pregunta-1-distribución-por-grupo" class="level2">
 <h2 class="anchored" data-anchor-id="pregunta-1-distribución-por-grupo">Pregunta 1 – Distribución por grupo</h2>
 <p>¿Cómo varía la masa corporal (<code>body_mass_g</code>) entre las diferentes especies y islas de los pingüinos?</p>
-<div id="e27b01cc" class="cell" data-execution_count="1">
+<div id="e552c4dd" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -205,26 +205,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>graf_p1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="1">
 
 <style>
-  #altair-viz-0d3fe4d7e5204e4cb6dd4d80a869d40c.vega-embed {
+  #altair-viz-df84a2e0b3914426b5d19709180045f4.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-0d3fe4d7e5204e4cb6dd4d80a869d40c.vega-embed details,
-  #altair-viz-0d3fe4d7e5204e4cb6dd4d80a869d40c.vega-embed details summary {
+  #altair-viz-df84a2e0b3914426b5d19709180045f4.vega-embed details,
+  #altair-viz-df84a2e0b3914426b5d19709180045f4.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-0d3fe4d7e5204e4cb6dd4d80a869d40c"></div>
+<div id="altair-viz-df84a2e0b3914426b5d19709180045f4"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0d3fe4d7e5204e4cb6dd4d80a869d40c") {
-      outputDiv = document.getElementById("altair-viz-0d3fe4d7e5204e4cb6dd4d80a869d40c");
+    if (outputDiv.id !== "altair-viz-df84a2e0b3914426b5d19709180045f4") {
+      outputDiv = document.getElementById("altair-viz-df84a2e0b3914426b5d19709180045f4");
     }
 
     const paths = {
@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pregunta-2-ubicación-de-especies" class="level2">
 <h2 class="anchored" data-anchor-id="pregunta-2-ubicación-de-especies">Pregunta 2 – Ubicación de especies</h2>
 <p>¿Qué especies de pingüinos se encuentran en cada isla? ¿Alguna especie está presente solo en una isla?</p>
-<div id="524cfa0a" class="cell" data-execution_count="2">
+<div id="ac527b34" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conteo <span class="op">=</span> df.groupby([<span class="st">"island"</span>, <span class="st">"species"</span>]).size().reset_index(name<span class="op">=</span><span class="st">"count"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>graf_p2 <span class="op">=</span> alt.Chart(conteo).mark_rect().encode(</span>
@@ -296,26 +296,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>graf_p2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="2">
 
 <style>
-  #altair-viz-ce6495d83f3e475f9b3f906813211a16.vega-embed {
+  #altair-viz-70c8557a66d443e485ec26809c30f6b7.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-ce6495d83f3e475f9b3f906813211a16.vega-embed details,
-  #altair-viz-ce6495d83f3e475f9b3f906813211a16.vega-embed details summary {
+  #altair-viz-70c8557a66d443e485ec26809c30f6b7.vega-embed details,
+  #altair-viz-70c8557a66d443e485ec26809c30f6b7.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-ce6495d83f3e475f9b3f906813211a16"></div>
+<div id="altair-viz-70c8557a66d443e485ec26809c30f6b7"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ce6495d83f3e475f9b3f906813211a16") {
-      outputDiv = document.getElementById("altair-viz-ce6495d83f3e475f9b3f906813211a16");
+    if (outputDiv.id !== "altair-viz-70c8557a66d443e485ec26809c30f6b7") {
+      outputDiv = document.getElementById("altair-viz-70c8557a66d443e485ec26809c30f6b7");
     }
 
     const paths = {
@@ -372,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pregunta-3-diferencias-entre-sexos" class="level2">
 <h2 class="anchored" data-anchor-id="pregunta-3-diferencias-entre-sexos">Pregunta 3 – Diferencias entre sexos</h2>
 <p>¿Existen diferencias notables entre machos y hembras en alguna característica cuantitativa?</p>
-<div id="e29331d3" class="cell" data-execution_count="3">
+<div id="c70ff6f9" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_sex <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">"culmen_length_mm"</span>, <span class="st">"sex"</span>])</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_sex <span class="op">=</span> df_sex[df_sex[<span class="st">"sex"</span>].isin([<span class="st">"MALE"</span>, <span class="st">"FEMALE"</span>])]</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -389,26 +389,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>graf_p3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="3">
 
 <style>
-  #altair-viz-8340910e998a433cb5ab4f31b15eeef5.vega-embed {
+  #altair-viz-14f308893afa451690da8784bef944a8.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-8340910e998a433cb5ab4f31b15eeef5.vega-embed details,
-  #altair-viz-8340910e998a433cb5ab4f31b15eeef5.vega-embed details summary {
+  #altair-viz-14f308893afa451690da8784bef944a8.vega-embed details,
+  #altair-viz-14f308893afa451690da8784bef944a8.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-8340910e998a433cb5ab4f31b15eeef5"></div>
+<div id="altair-viz-14f308893afa451690da8784bef944a8"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-8340910e998a433cb5ab4f31b15eeef5") {
-      outputDiv = document.getElementById("altair-viz-8340910e998a433cb5ab4f31b15eeef5");
+    if (outputDiv.id !== "altair-viz-14f308893afa451690da8784bef944a8") {
+      outputDiv = document.getElementById("altair-viz-14f308893afa451690da8784bef944a8");
     }
 
     const paths = {
